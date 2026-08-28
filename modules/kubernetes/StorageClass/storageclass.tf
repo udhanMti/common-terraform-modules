@@ -21,8 +21,10 @@ resource "kubernetes_storage_class" "example" {
   metadata {
     name = var.storage_class_name
   }
-  storage_provisioner = var.storage_provisioner
-  reclaim_policy      = var.reclaim_policy
-  parameters          = var.parameters
-  mount_options       = var.mount_options
+  storage_provisioner    = var.storage_provisioner
+  reclaim_policy         = var.reclaim_policy
+  parameters             = var.parameters
+  mount_options          = var.mount_options
+  volume_binding_mode    = var.volume_binding_mode
+  allow_volume_expansion = var.allow_volume_expansion
 }
